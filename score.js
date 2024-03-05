@@ -1,3 +1,27 @@
+// MANTENER PANTALLA ACTIVA
+
+let wakeLockObj = null;
+
+async function solicitarBloqueoPantalla() {
+    try {
+        wakeLockObj = await navigator.wakeLock.request('screen');
+        console.log("Pantalla Bloqueada");
+        console.log(wakeLockObj);
+    } catch (error) {
+        console.log("Error de bloqueo: " + error);
+    }
+}
+
+//ZOOM RESULTADOS
+function zoomResultadosOn() {
+    document.body.style.zoom = "45%";
+}
+function zoomResultadosOff() {
+    document.body.style.zoom = "100%";
+}
+
+//CODIGO ORIGINAL
+
 var colorPrimario = "#207720";
 var  colorSecundario = "#000";
 var colorCheck = "#000";
@@ -838,7 +862,7 @@ function naipes() {
 }
 
 function ayuda() {
-    alert('El objetivo de esta app es apuntar los pases de un sabot de Punto y Banca, no guardando estos registros.\n\n Esta app permite marcar la suerte ganadora de cada pase utilizando los botones que se encuentran a la derecha, estos pases son registrados de manera secuencial, sin poder saltear un pase.\n\n Presionando en las celdas de la tabla, se tendrá la posibilidad de anotar el puntaje de ambas suertes.\n\n El botón "Back" permite retroceder un pase, borrando la información anotada.\n El botón "Reset" elimina toda la información registrada.\n\n El botón "Reglas" da acceso al Reglamento de Naipes que se aplica durante la partida.')
+    alert(' El objetivo de esta app es apuntar los pases de un sabot de Punto y Banca, no guardando estos registros.\n\n Esta app permite marcar la suerte ganadora de cada pase utilizando los botones que se encuentran a la derecha, estos pases son registrados de manera secuencial, sin poder saltear un pase.\n\n Presionando en las celdas de la tabla, se tendrá la posibilidad de anotar el puntaje de ambas suertes.\n\n El botón "Back" permite retroceder un pase, borrando la información anotada.\n El botón "Reset" elimina toda la información registrada.\n\n El botón "Reglas" da acceso al Reglamento de Naipes que se aplica durante la partida.\n\n Manteniendo presionada el area donde se encuentran escritos la cantidad de pases y sus resultados, el usuario puede ver la grilla completa.')
 }
 
 // BACK Y RESET
