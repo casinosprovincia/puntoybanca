@@ -134,6 +134,9 @@ button {
 .botones_accesorios {
     margin-top: 8rem;
     margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
 }
 /* .boton_instrucciones, */
 .boton_naipes,
@@ -232,7 +235,5 @@ footer {
     font-size: 2rem;
     text-align: center;
     grid-area: footer;
-    /* background-image: linear-gradient(var(--colorBackground) 25%, var(--colorBackgroundGrad)); */
     color: var(--colorPrimario);
-    transition: .2s ease all;
 }
