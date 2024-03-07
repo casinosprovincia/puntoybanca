@@ -9,6 +9,7 @@
     --colorBoton6: #3d2611;
     --colorBackground: #207720;
     --colorBackgroundGrad: #001400;
+    --colorBackgroundOscuro: #003500;
     --colorLetras: #ffda14;
 }
 
@@ -51,6 +52,10 @@ h1 {
 }
 
 /* MAIN */
+.main-tabla,
+.main-resultados {
+    margin-bottom: 10vh;
+}
 .main-tabla {
     max-width: 500px;
     grid-area: main;
@@ -69,13 +74,17 @@ h1 {
 /* SIDEBAR */
 .botonera {
     display: flex;
-    flex-direction: column;
-    place-items:  center;
+    padding: 1rem;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: var(--colorBackgroundOscuro);
 }
 button {
-    width: 80px;
-    margin-top: .5rem;
-    margin-bottom: 4rem;
+    margin: 0 auto;
+    height: 40px;
+    width: 50px;
+    /* margin-top: .5rem;
+    margin-bottom: 4rem; */
     padding: .5rem;
     font-family:  'Baskervville', 'Libre Baskerville', serif;
     font-size: 2rem;
@@ -84,18 +93,24 @@ button {
     color: var(--colorSecundario);
     border-radius: 10px;
 }
-#boton_punto {
-    margin-top: 2rem;
+#boton_punto,
+#boton_banca {
+    /* margin-top: 2rem; */
+    margin-right: 3rem;
 }
 .boton_reset {  
     margin-top: 4rem;
     margin-bottom: 0;
+    width: 80px;
     background-image: linear-gradient(45deg, var(--colorBoton3) 65%, var(--colorBoton4));
 }
 #boton_volver {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    margin-left: 3rem;
+    background-image: linear-gradient(45deg, var(--colorBoton3) 65%, var(--colorBoton4));
 }
 .resultados {
+    margin-bottom: 6rem;
     font-size: 2rem;
     font-weight: bold;
     line-height: 3rem;
@@ -117,11 +132,14 @@ button {
     border: none;
 }
 .botones_accesorios {
-    margin-top: 6rem;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
 }
 /* .boton_instrucciones, */
 .boton_naipes,
 .boton_ayuda {
+    margin-bottom: 3rem;
+    width: 80px;
     background-image: linear-gradient(45deg, var(--colorBoton5) 60%, var(--colorBoton6));
 }
 
@@ -206,10 +224,15 @@ button {
 
 /* FOOTER */
 footer {
+    margin-bottom: 1rem;
     padding-top: 2rem;
+    position: fixed;
+    bottom: 5vh;
+    left: 2vw;
     font-size: 2rem;
     text-align: center;
     grid-area: footer;
-    background-image: linear-gradient(var(--colorBackground) 25%, var(--colorBackgroundGrad));
+    /* background-image: linear-gradient(var(--colorBackground) 25%, var(--colorBackgroundGrad)); */
     color: var(--colorPrimario);
+    transition: .2s ease all;
 }
